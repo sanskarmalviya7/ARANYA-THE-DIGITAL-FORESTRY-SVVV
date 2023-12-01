@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+      // Prevent dropdown menu from closing when click inside the form
+      $(document).on("click", ".action-buttons .dropdown-menu", function (e) {
+        e.stopPropagation();
+      });
+      
+      // Function to scroll to the bottom of the page
+      function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show the scroll link when scrolling down
+        window.onscroll = function() {
+            var link = document.getElementById('scrollToBottomLink');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                link.style.display = 'inline-block';
+            } else {
+                link.style.display = 'none';
+            }
+        };
+    </script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylee.css" />
+
+    <title style="color: #93c572">ARANYA THE DIGITAL FORESTRY</title>
+  </head>
+  <body>
+    <div class="cont">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="h.html" class="navbar-brand">ARANYA <b> THE DIGITAL FORESTRY</b></a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div
+          id="navbarCollapse"
+          class="collapse navbar-collapse justify-content-start"
+        >
+          <div class="navbar-nav">
+            <a href="h.html" class="nav-item nav-link">Home</a>
+            <a href="abt.html" class="nav-item nav-link">About</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="nav-item nav-link dropdown-toggle"
+                >Services</a
+              >
+              <div class="dropdown-menu">
+                <a href="wheather.html" class="dropdown-item">Weather Forecast</a>
+                <!-- <a href="#" class="dropdown-item">Species Recognisition</a> -->
+                <a href="sa.html" class="dropdown-item">Image Recognition</a>
+                <!-- <a href="#" class="dropdown-item">Primium</a> -->
+              </div>
+            </div>
+            <a href="pricing.html" class="nav-item nav-link">Pricing</a>
+            <!-- <a href="#" class="nav-item nav-link">Blog</a> -->
+            <a href="#" id="scrollToBottomLink" onclick="scrollToBottom()" class="nav-item nav-link">Contact</a>
+          </div>
+          <form class="navbar-form form-inline">
+            <div class="input-group search-box">
+              <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="Search here..."
+              />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="material-icons">&#xE8B6;</i>
+                </span>
+              </div>
+            </div>
+          </form>
+          <div class="navbar-nav ml-auto action-buttons">
+            
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="btn btn-primary dropdown-toggle sign-up-btn"
+                >Sanskar</a
+              >
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item">Logout</a>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="ar.jpg"
+              style="width: 920px; height: 790px"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="ar2.jpg"
+              style="width: 920px; height: 790px"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="el.jpg"
+              style="width: 920px; height: 790px"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <!-- <span class="visually-hidden">Next</span> -->
+        </button>
+      </div>
+      <div class="main-card">
+        <div class="card-body">
+          <div class="main-card-div">
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 400"
+            >
+              <b>Ralamandal The Wild Life Century</b>
+            </h4>
+            <img
+              class="main-card-img"
+              src="Rala.jpeg"
+              alt=" "
+              style="width: 35rem; height: 24rem"
+            />
+            <div class="main-card-desc">
+              <p
+                class="card-text"
+                style="font-family: Arial, Helvetica, sans-serif"
+              >
+              <br>
+              Ralamandal Wildlife Sanctuary is a wildlife reserve located in Indore, Madhya Pradesh, India. It was established in 1989 and is spread over an area of 5 square kilometers. The sanctuary is home to various species of birds and animals, including leopards, black bucks, chitals, blue bulls, hyenas, barking deers, peacocks, palm-civets, porcupines, and hares
+             The sanctuary also has an ancient palace built by Holkars, which was primarily used as a hunting lodge. In order to protect animals and birds from noise and air pollution emanating from nearby highways, a green wall of about 10,000 trees was created
+              to protect the animals and birds from noise and air pollution from nearby highways, a green wall of about 10,000 trees was created within the sanctuary.
+              
+              </p>
+
+              <p style="font-family: Arial, Helvetica, sans-serif">
+                Aranya, the digital forestry website, serves as an invaluable resource for nature enthusiasts and conservationists visiting wildlife sanctuaries such as Rala Mandal. Users can easily access comprehensive information on the sanctuary's biodiversity through Aranya's user-friendly interface. The website provides up-to-date data on the number of species inhabiting the sanctuary, offering a detailed breakdown of flora and fauna. Additionally, Aranya offers real-time temperature updates, aiding visitors in planning their trips effectively. Users can also learn about the vast forest cover by accessing information on the number of trees within the sanctuary. 
+              </p>
+              <a href="Ralamandall.html"
+                ><button class="btn1">Read More!</button></a
+              >
+            </div>
+          </div>
+          <div class="main-card-div">
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 400"
+            >
+              <b>Devguradiya Parvat</b>
+            </h4>
+            <img
+              class="main-card-img"
+              src="devguradia_hill.jpg"
+              alt=" "
+              style="width: 35rem; height: 24rem"
+            />
+            <div class="main-card-desc">
+              <p
+                class="card-text"
+                style="font-family: Arial, Helvetica, sans-serif"
+              >
+              <br>
+              Devguradia Forest or Devguradia City Forest is a proposed forest project located on Devguradia Hill in Indore, Madhya Pradesh, India
+              
+              . The project aims to develop Devguradia as a city forest to promote ecotourism within close proximity to the city
+              Devguradia hill is often visited by visitors who also visit Ralamandal Sanctuary.
+              . The forest will cover approximately 100 hectares of land and will be developed as a recreational spot
+              Additionally, there are plans to develop Devguradia as a city forest to promote ecotourism within close proximity to the city of Indore. The proposed forest project aims to cover approximately 100 hectares of land and is expected to include facilities for visitors, camping, trekking, and walking, jogging, and cycling tracks
+
+              </p>
+
+              <p style="font-family: Arial, Helvetica, sans-serif">
+                Aranya, the digital forestry platform, is essential for exploring Devguradiya Parvat. Offering real-time data on biodiversity, temperature, and forest cover, it empowers nature enthusiasts to plan safe and informed visits. The user-friendly interface provides detailed insights into the diverse species inhabiting the sanctuary, while temperature updates aid in trip planning. Information on the number of trees enriches the experience, and Aranya's cutting-edge technology ensures visitors are aware of any potential risks through a sophisticated monitoring system. In a concise 100 words, Aranya proves indispensable for those seeking a comprehensive and secure exploration of the captivating landscapes of Devguradiya Parvat.
+              </p>
+              <a href="Devguradiaa.html"
+                ><button class="btn1">Read More!</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="margin-left: 20px; background-color: rgba(255, 255, 255, 0.5)"
+      >
+        <div class="card-body">
+          <div class="img-div">
+            <img class="card-img" src="dfs.jpeg" alt=" " />
+          </div>
+          <div>
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 400"
+            >
+              <b>The Digital Forestry</b>
+            </h4>
+            <p
+              class="card-text"
+              style="font-family: Arial, Helvetica, sans-serif"
+            >
+              Digital forestry is a cutting-edge approach that leverages
+              technology and data-driven solutions to revolutionize the
+              management of forest resources and ecosystems. By utilizing tools
+              such as remote sensing, Geographic Information Systems (GIS),
+              drones, and artificial intelligence, digital forestry enables
+              forest managers to make more informed decisions, optimize resource
+              utilization, and enhance sustainability.
+            </p>
+
+            <p style="font-family: Arial, Helvetica, sans-serif">
+              Through real-time monitoring and analysis, it provides valuable
+              insights into forest health, biodiversity, and environmental
+              conditions.
+            </p>
+            <a href="abt.html"><button class="btn1">Learn More!</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="margin-left: 30%; background-color: rgba(255, 255, 255, 0.5)"
+      >
+        <div class="card-body">
+          <div class="img-div">
+            <img src="remotee.jpeg" style="width: 30rem" alt=" " />
+          </div>
+          <div>
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 400"
+            >
+              <b>Remote Sensing and Data Analytics</b>
+            </h4>
+
+            <p
+              class="card-text"
+              style="font-family: Arial, Helvetica, sans-serif"
+            >
+              Digital forestry harnesses the power of remote sensing
+              technologies, such as satellite imagery and LiDAR (Light Detection
+              and Ranging), to gather comprehensive data about forested areas.
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif">
+              Advanced data analytics and machine learning algorithms are then
+              applied to process this data, enabling forest managers to monitor
+              changes over time, detect disturbances like wildfires or disease
+              outbreaks and sustainable management.
+            </p>
+            <a href="lrn.html"><button class="btn1">Learn More!</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="margin-left: 20px; background-color: rgba(255, 255, 255, 0.5)"
+      >
+        <div class="card-body">
+          <div class="img-div">
+            <img src="fm.jpeg" style="width: 30rem" alt=" " />
+          </div>
+          <div>
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 500"
+            >
+              <b>Forest Monitoring and Management</b>
+            </h4>
+
+            <p
+              class="card-text"
+              style="font-family: Arial, Helvetica, sans-serif"
+            >
+              With the advent of digital forestry, forest monitoring has become
+              more efficient and accurate. Drones equipped with cameras and
+              sensors can capture high-resolution images and 3D models of
+              forests, facilitating detailed assessments of tree health, carbon
+              sequestration, and wildlife habitats.
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif">
+              Geographic Information Systems (GIS) play a vital role in mapping
+              and managing forest resources, enabling stakeholders to plan
+              timber harvests, protect sensitive areas, and optimize land use
+              for biodiversity conservation.
+            </p>
+            <a href="fmm.html"><button class="btn1">Learn More!</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="margin-left: 30%; background-color: rgba(255, 255, 255, 0.5)"
+      >
+        <div class="card-body">
+          <div class="img-div">
+            <img src="climate.jpeg" style="width: 30rem" alt=" " />
+          </div>
+          <div>
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 400"
+            >
+              <b> Climate Change Mitigation and Sustainability</b>
+            </h4>
+
+            <p
+              class="card-text"
+              style="font-family: Arial, Helvetica, sans-serif"
+            >
+              Digital forestry is a critical tool in the fight against climate
+              change. By enabling better tracking of carbon storage in forests
+              and the reduction of deforestation rates, it contributes to global
+              climate goals.
+            </p>
+            <p style="font-family: Arial, Helvetica, sans-serif">
+              The data collected through digital forestry initiatives can also
+              assist in adapting to the effects of climate change, helping
+              forest managers make informed decisions to protect against
+              increasing risks such as invasive species and extreme weather
+              events. In this way, digital forestry is a key player in both
+              climate mitigation and adaptation efforts, making it a valuable
+              asset in the face of environmental challenges.
+            </p>
+            <a href="climate.html"><button class="btn1">Learn More!</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        style="margin-left: 20px; background-color: rgba(255, 255, 255, 0.5)"
+      >
+        <div class="card-body">
+          <div class="img-div">
+            <img src="aip.jpeg" style="width: 30rem" alt=" " />
+          </div>
+          <div>
+            <h4
+              class="card-title"
+              style="color: #594545; font-family: eb garamond; font-weight: 400"
+            >
+              <b> AI and Predictive Analytics</b>
+            </h4>
+
+            <p
+              class="card-text"
+              style="font-family: Arial, Helvetica, sans-serif"
+            >
+              Artificial intelligence (AI) is transforming digital forestry
+              through predictive analytics. Machine learning models can process
+              extensive datasets to forecast forest growth, predict potential
+              disturbances, and even identify endangered species.
+            </p>
+
+            <p style="font-family: Arial, Helvetica, sans-serif">
+              This information helps in making proactive decisions for
+              conservation and sustainable forest management. AI-driven tools
+              are also used to automate tree species identification, making the
+              process faster and more accurate.
+            </p>
+            <a href="ai.html"><button class="btn1">Learn More!</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <b>
+          <p>Contact Us: AranayTheDigitalForestry@gmail.com</p>
+          <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore ( M.P), India</p>
+          <p>&copy;Copyright</p>
+        </b>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function slideWords() {
+          $(".slider-content").css("animation", "none"); // Pause the animation
+          setTimeout(function () {
+            $(".slider-content").css("animation", "slide 10s linear infinite"); // Restart the animation
+          }, 100);
+        }
+
+        setInterval(slideWords, 1000); // Change word every 5 seconds
+      });
+    </script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      -->
+  </body>
+</html>

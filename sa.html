@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Varela+Round"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="lll.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+      // Prevent dropdown menu from closing when click inside the form
+      $(document).on("click", ".action-buttons .dropdown-menu", function (e) {
+        e.stopPropagation();
+      });
+      
+      // Function to scroll to the bottom of the page
+      function scrollToBottom() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show the scroll link when scrolling down
+        window.onscroll = function() {
+            var link = document.getElementById('scrollToBottomLink');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                link.style.display = 'inline-block';
+            } else {
+                link.style.display = 'none';
+            }
+        };
+    </script>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="ll.css" />
+
+    <title style="color: #93c572">ARANYA THE DIGITAL FORESTRY</title>
+    <style>
+    
+      #selectedImage {
+          max-width: 100%;
+          height: auto;
+          margin-top: 20px;
+      }
+
+      #goodLuckButton {
+          display: none;
+      }
+  </style>
+  </head>
+  <body>
+    <div class="cont">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="h.html" class="navbar-brand">ARANYA <b> THE DIGITAL FORESTRY</b></a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collection of nav links, forms, and other content for toggling -->
+        <div
+          id="navbarCollapse"
+          class="collapse navbar-collapse justify-content-start"
+        >
+          <div class="navbar-nav">
+            <a href="h.html" class="nav-item nav-link">Home</a>
+            <a href="abt.html" class="nav-item nav-link">About</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="nav-item nav-link dropdown-toggle"
+                >Services</a
+              >
+              <div class="dropdown-menu">
+                <a href="wheather.html" class="dropdown-item">Weather Forecast</a>
+                <!-- <a href="#" class="dropdown-item">Species Recognisition</a> -->
+                <a href="sa.html" class="dropdown-item">Image Recognition</a>
+                <!-- <a href="#" class="dropdown-item">Primium</a> -->
+              </div>
+            </div>
+            <a href="pricing.html" class="nav-item nav-link">Pricing</a>
+            <!-- <a href="#" class="nav-item nav-link">Blog</a> -->
+            <a href="#" id="scrollToBottomLink" onclick="scrollToBottom()" class="nav-item nav-link">Contact</a>
+          </div>
+          <form class="navbar-form form-inline">
+            <div class="input-group search-box">
+              <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="Search here..."
+              />
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="material-icons">&#xE8B6;</i>
+                </span>
+              </div>
+            </div>
+          </form>
+          <div class="navbar-nav ml-auto action-buttons">
+            
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="btn btn-primary dropdown-toggle sign-up-btn"
+                >Sanskar</a
+              >
+              <div class="dropdown-menu">
+                <a href="index.html" class="dropdown-item">Logout</a>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        class="card wrapper"
+        style="
+          margin-left: 75px;
+          background-color: rgba(255, 255, 255, 0.5);
+          width: 1350px;
+          margin-top: 20px;
+        "
+      >
+        <div class="card-body">
+          <div>
+            <div class="location-div">
+              <h4
+                class="card-title"
+                style="
+                  color: #635147;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-weight: 1100;
+                  margin-left: 400px;
+                  font-size: 50px;
+                "
+              >
+                <b>Satellite Image Recognition</b><br>
+              </h4>
+             
+              <div class="location-imag1e"><br>
+                <img src="opo.png" alt="Devguradiya Parvat" class="test" />
+              </div><br>
+              
+              <div class="location"><br>
+                <div class="location-info"><br>
+                  <h2>Select a Image</h2><br>
+                  
+    <label for="pageSelect"></label>
+    <select id="pageSelect" onchange="displaySelectedImage()">
+        <option value="" disabled selected>Select a Image</option><br>
+        <option value="page1" data-image="op.png">Forest 1</option>
+        <option value="page2" data-image="op2.png">Forest 2</option>
+        <option value="page3" data-image="op3.jpg">Forest 3</option>
+      </select>
+
+    <img id="selectedImage" alt="Selected Image"><br>
+
+    <button id="goodLuckButton" onclick="showGoodLuck()">COUNT TREES</button>
+    <p id="goodLuckText" style="display: none;">TOTAL NO. OF TREES: 247 </p>
+<br>
+    <script>
+        function displaySelectedImage() {
+            var selectedPage = document.getElementById("pageSelect");
+            var selectedImage = document.getElementById("selectedImage");
+            var goodLuckButton = document.getElementById("goodLuckButton");
+
+            var selectedIndex = selectedPage.selectedIndex;
+            var selectedOption = selectedPage.options[selectedIndex];
+
+            var imageURL = selectedOption.getAttribute("data-image");
+
+            if (imageURL) {
+                selectedImage.src = imageURL;
+                goodLuckButton.style.display = "block"; // Show the button when an image is selected
+            } else {
+                selectedImage.src = "";
+                goodLuckButton.style.display = "none"; // Hide the button if no page is selected
+            }
+        }
+
+        function showGoodLuck() {
+            var goodLuckText = document.getElementById("goodLuckText");
+            goodLuckText.style.display = "block";
+        }
+    </script>
+
+       
+   
+                </div>
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <b>
+          <p>Contact Us: AranayTheDigitalForestry@gmail.com</p>
+          <p>Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore ( M.P), India</p>
+          <p>&copy;Copyright</p>
+        </b>
+      </div>
+    </div>
+   
+
+  </body>
+</html>
